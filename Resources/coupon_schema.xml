@@ -1,0 +1,80 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="PRM_Entorno">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="CodigoTerminal" type="xs:string" minOccurs="0" />
+                <xs:element name="NombreTerminal" type="xs:string" minOccurs="0" />
+                <xs:element name="CodigoUsuario" type="xs:string" minOccurs="0" />
+                <xs:element name="NombreUsuario" type="xs:string" minOccurs="0" />
+                <xs:element name="TipoDocumento" type="xs:string" minOccurs="0" />
+                <xs:element name="Copia" type="xs:int" minOccurs="0" />
+                <xs:element name="ClientePorDefecto" type="xs:string" minOccurs="0" />
+                <xs:element name="Empresa_Nombre" type="xs:string" minOccurs="0" />
+                <xs:element name="Empresa_Direccion" type="xs:string" minOccurs="0" />
+                <xs:element name="Empresa_Codigopostal" type="xs:string" minOccurs="0" />
+                <xs:element name="Empresa_Poblacion" type="xs:string" minOccurs="0" />
+                <xs:element name="Empresa_Provincia" type="xs:string" minOccurs="0" />
+                <xs:element name="Empresa_Pais" type="xs:string" minOccurs="0" />
+                <xs:element name="Empresa_CIF" type="xs:string" minOccurs="0" />
+                <xs:element name="Empresa_Telefono1" type="xs:string" minOccurs="0" />
+                <xs:element name="Empresa_Telefono2" type="xs:string" minOccurs="0" />
+                <xs:element name="Empresa_Telefono3" type="xs:string" minOccurs="0" />
+                <xs:element name="Empresa_Fax" type="xs:string" minOccurs="0" />
+                <xs:element name="Empresa_Email" type="xs:string" minOccurs="0" />
+                <xs:element name="Empresa_Web" type="xs:string" minOccurs="0" />
+                <xs:element name="Almacen_Nombre" type="xs:string" minOccurs="0" />
+                <xs:element name="Almacen_Direccion" type="xs:string" minOccurs="0" />
+                <xs:element name="Almacen_Codigopostal" type="xs:string" minOccurs="0" />
+                <xs:element name="Almacen_Poblacion" type="xs:string" minOccurs="0" />
+                <xs:element name="Almacen_Provincia" type="xs:string" minOccurs="0" />
+                <xs:element name="Almacen_Pais" type="xs:string" minOccurs="0" />
+                <xs:element name="Almacen_Telefono" type="xs:string" minOccurs="0" />
+                <xs:element name="Almacen_Fax" type="xs:string" minOccurs="0" />
+                <xs:element name="Almacen_Email" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Vale">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Fecha" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="Importe" type="xs:decimal" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <PRM_Entorno>
+    <CodigoTerminal>TPV01</CodigoTerminal>
+    <NombreTerminal>Terminal punto de venta 1</NombreTerminal>
+    <CodigoUsuario>EVA.SANZ</CodigoUsuario>
+    <NombreUsuario>EVA SANZ</NombreUsuario>
+    <TipoDocumento>Nota</TipoDocumento>
+    <Copia>1</Copia>
+    <ClientePorDefecto>TPV001</ClientePorDefecto>
+    <Empresa_Nombre>Empresa (tpv)</Empresa_Nombre>
+    <Empresa_Direccion>C/ Ciudad de frias, 21</Empresa_Direccion>
+    <Empresa_Codigopostal>28021</Empresa_Codigopostal>
+    <Empresa_Poblacion>Madrid</Empresa_Poblacion>
+    <Empresa_Provincia>Madrid</Empresa_Provincia>
+    <Empresa_Pais>España</Empresa_Pais>
+    <Empresa_CIF>XXXXX</Empresa_CIF>
+    <Empresa_Telefono1>91 710 06 34</Empresa_Telefono1>
+    <Empresa_Fax>91 798 70 55</Empresa_Fax>
+    <Empresa_Email>info@aliquo.es</Empresa_Email>
+    <Empresa_Web>www.aliquo.es</Empresa_Web>
+    <Almacen_Nombre>Almacen Principal</Almacen_Nombre>
+    <Almacen_Pais>España</Almacen_Pais>
+  </PRM_Entorno>
+  <Vale>
+    <Fecha>2013-07-25T15:10:18+02:00</Fecha>
+    <Importe>0.91</Importe>
+  </Vale>
+</NewDataSet>
