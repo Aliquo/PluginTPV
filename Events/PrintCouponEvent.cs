@@ -1,8 +1,10 @@
-﻿using AliquoTPV.Extensibility;
+﻿using AliquoTPV.Core;
+using AliquoTPV.Extensibility;
 using System;
 using System.ComponentModel.Composition;
 using System.Data;
 using System.Windows.Forms;
+using Convert = AliquoTPV.Core.Convert;
 
 namespace PluginTPV_Demo.Events
 {
@@ -25,7 +27,7 @@ namespace PluginTPV_Demo.Events
             try
             {
 
-                if (e.Type == DocumentType.SalesDocument || e.Type == DocumentType.SalesInvoice)
+                if (e.Type == PrintDocumentType.SalesDocument || e.Type == PrintDocumentType.SalesInvoice)
                 {
 
                     // the possibility of printing a voucher is assessed if is a ticket or invoice
@@ -33,8 +35,8 @@ namespace PluginTPV_Demo.Events
                     if (!e.IsCopy && e.Data != null && e.Data.Tables.Contains("Notas") && e.Data.Tables["Notas"].Rows.Count > 0)
                     {
 
-                        var docDate = Convert.ToDateTime(e.Data.Tables["Notas"].Rows[0]["Fecha"]);
-                        var docAmount = Convert.ToDecimal(e.Data.Tables["Notas"].Rows[0]["ImporteTotal"]);
+                        var docDate = Convert.ValueToDateTime(e.Data.Tables["Notas"].Rows[0]["Fecha"]);
+                        var docAmount = Convert.ValueToDecimal(e.Data.Tables["Notas"].Rows[0]["ImporteTotal"]);
 
                         // print a coupon for 2% of the sales amount if it exceeds the amount of 30
                         if (docAmount >= 30m)

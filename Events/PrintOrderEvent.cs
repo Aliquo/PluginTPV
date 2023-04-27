@@ -1,4 +1,5 @@
-﻿using AliquoTPV.Extensibility;
+﻿using AliquoTPV.Core;
+using AliquoTPV.Extensibility;
 using System.ComponentModel.Composition;
 
 namespace PluginTPV_Demo.Events
@@ -18,7 +19,7 @@ namespace PluginTPV_Demo.Events
         {
 
             // example to replace the order printing functionality
-            if (e.Type == DocumentType.SalesOrder)
+            if (e.Type == PrintDocumentType.SalesOrder)
             {
 
                 // if data exists then another printing system is used instead of Crystal Report 
