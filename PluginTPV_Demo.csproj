@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Events\AppEvents.cs" />
     <Compile Include="Events\PaymentSelectedEvent.cs" />
     <Compile Include="Tools\PrintOrder.cs" />
     <Compile Include="Events\PrintOrderEvent.cs" />
