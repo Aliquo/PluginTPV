@@ -10,10 +10,10 @@ namespace PluginTPV_Demo.Events
     {
         public PaymentSelectedEvent()
         {
-            this.PaymentSelected += PaymentSelectedEvent_PaymentSelected;
+            this.PaymentSelected += Events_PaymentSelected;
         }
 
-        private void PaymentSelectedEvent_PaymentSelected(IHost sender, PaymentEventArgs e)
+        private void Events_PaymentSelected(IHost sender, PaymentEventArgs e)
         {
 
             // card payments are intercepted to simulate payment by device

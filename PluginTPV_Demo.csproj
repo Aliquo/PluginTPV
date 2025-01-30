@@ -36,11 +36,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AliquoTPV.Core">
-      <HintPath>..\..\..\..\..\..\Abaco WS\Aliquo\dev\dev\Terminal TPV\libs\AliquoTPV.Core.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Aliquo TPV\AliquoTPV.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="AliquoTPV.Extensibility">
-      <HintPath>..\..\..\..\..\..\Abaco WS\Aliquo\dev\dev\Terminal TPV\libs\AliquoTPV.Extensibility.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Aliquo TPV\AliquoTPV.Extensibility.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Events\AppEvents.cs" />
+    <Compile Include="Events\SearchProductEvent.cs" />
     <Compile Include="Events\PaymentSelectedEvent.cs" />
     <Compile Include="Tools\PrintOrder.cs" />
     <Compile Include="Events\PrintOrderEvent.cs" />

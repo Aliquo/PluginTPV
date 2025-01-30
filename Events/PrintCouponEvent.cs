@@ -16,11 +16,11 @@ namespace PluginTPV_Demo.Events
        
         public PrintCouponEvent()
         {
-            PrintAfter += Eventos_PrintAfter;
+            PrintAfter += Events_PrintAfter;
         }
 
 
-        private void Eventos_PrintAfter(IHost sender, PrintEventArgs e)
+        private void Events_PrintAfter(IHost sender, PrintEventArgs e)
         {
 
             // code example with functionality to print using Crystal Report for coupon printing

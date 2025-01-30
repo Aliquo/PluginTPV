@@ -11,16 +11,16 @@ namespace PluginTPV_Demo.Events
     {
         public AppEvents()
         {
-            this.AppLoaded += AppEvents_AppLoaded;
-            this.AppClosed += AppEvents_AppClosed;
+            this.AppLoaded += Events_AppLoaded;
+            this.AppClosed += Events_AppClosed;
         }
 
-        private void AppEvents_AppLoaded(IHost sender, EventArgs e)
+        private void Events_AppLoaded(IHost sender, EventArgs e)
         {
             Console.WriteLine("Loaded application...");
         }
 
-        private void AppEvents_AppClosed(IHost sender, EventArgs e)
+        private void Events_AppClosed(IHost sender, EventArgs e)
         {
             Console.WriteLine("Closed application...");
         }

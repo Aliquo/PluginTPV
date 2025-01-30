@@ -12,10 +12,10 @@ namespace PluginTPV_Demo.Events
 
         public PrintOrderEvent()
         {
-            PrintBefore += Eventos_PrintBefore;
+            PrintBefore += Events_PrintBefore;
         }
 
-        private void Eventos_PrintBefore(IHost sender, PrintEventArgs e)
+        private void Events_PrintBefore(IHost sender, PrintEventArgs e)
         {
 
             // example to replace the order printing functionality
