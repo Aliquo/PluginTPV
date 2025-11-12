@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="11/06/2025 12:47:10" ReportInfo.Modified="11/06/2025 12:58:30" ReportInfo.CreatorVersion="2025.2.8.0">
+  <Dictionary>
+    <XmlDataConnection Name="Connection" ConnectionString="rijcmlqYr2rXqA11BDtX8CZ2ByztnFaPsgwAZDcdAYpxl5VDjiZ5JgtAblTZuueMbeNmKzioY8sh9RZgR6P9RX5MN9k7QKmVFCe0OmnLX8jnPaAl43e/IFbrswmAR/jUglbGkwECkTk4ujL18pT4C4Gbvgou5MRYm6dqtP1Ag5wKJ1srMj670/jlYyi3YsvoMXQtdHL8YVMuUm1TvkOc5hvljgtqw==">
+      <TableDataSource Name="Vale" DataType="System.Int32" Enabled="true" TableName="Vale">
+        <Column Name="Empresa" DataType="System.String"/>
+        <Column Name="Tienda" DataType="System.String"/>
+        <Column Name="Fecha" DataType="System.DateTime"/>
+        <Column Name="Importe" DataType="System.Decimal"/>
+      </TableDataSource>
+    </XmlDataConnection>
+  </Dictionary>
+  <ReportPage Name="Page1" PaperWidth="70" PaperHeight="2970" LeftMargin="0" TopMargin="0" RightMargin="0" Watermark.Font="Arial, 60pt">
+    <DataBand Name="Data1" Width="264.6" Height="136.08" DataSource="Vale">
+      <TextObject Name="Text1" Width="264.6" Height="18.9" Text="[Vale.Empresa]" HorzAlign="Center" Font="Arial, 11pt, style=Bold"/>
+      <TextObject Name="Text2" Top="22.68" Width="264.6" Height="18.9" Text="[Vale.Tienda]" HorzAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text3" Top="64.26" Width="264.6" Height="30.24" Text="Vale por un importe de [FormatNumber([Vale.Importe],2)] €" HorzAlign="Center" Font="Arial, 9pt"/>
+      <TextObject Name="Text4" Top="124.74" Width="264.6" Height="11.34" Text="Válido hasta [FormatDateTime( [Vale.Fecha], &quot;dd/MM/yyyy&quot;)]" HorzAlign="Right" Font="Arial, 7pt"/>
+    </DataBand>
+  </ReportPage>
+</Report>

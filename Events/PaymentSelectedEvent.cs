@@ -6,7 +6,7 @@ namespace PluginTPV_Demo.Events
 {
     [Export(typeof(AliquoTPV.Extensibility.Events))]
     [EventsMetadata()]
-    internal class PaymentSelectedEvent : AliquoTPV.Extensibility.Events
+    public class PaymentSelectedEvent : AliquoTPV.Extensibility.Events
     {
         public PaymentSelectedEvent()
         {

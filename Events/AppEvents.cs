@@ -7,7 +7,7 @@ namespace PluginTPV_Demo.Events
 {
     [Export(typeof(AliquoTPV.Extensibility.Events))]
     [EventsMetadata()]
-    internal class AppEvents : AliquoTPV.Extensibility.Events
+    public class AppEvents : AliquoTPV.Extensibility.Events
     {
         public AppEvents()
         {

@@ -9,38 +9,41 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PluginTPV_Demo</RootNamespace>
     <AssemblyName>PluginTPV_Demo</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>false</Deterministic>
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\..\..\..\Program Files %28x86%29\Aliquo TPV\PlugIn\</OutputPath>
+    <OutputPath>.\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\..\..\..\..\..\Abaco WS\Aliquo\dev\Terminal TPV\AliquoTPV\bin\Plugin\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AliquoTPV.Core">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Aliquo TPV\AliquoTPV.Core.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Aliquo TPV 5\AliquoTPV.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="AliquoTPV.Extensibility">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Aliquo TPV\AliquoTPV.Extensibility.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Aliquo TPV 5\AliquoTPV.Extensibility.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -58,14 +61,12 @@
     <Compile Include="Events\AppEvents.cs" />
     <Compile Include="Events\SearchProductEvent.cs" />
     <Compile Include="Events\PaymentSelectedEvent.cs" />
-    <Compile Include="Tools\PrintOrder.cs" />
-    <Compile Include="Events\PrintOrderEvent.cs" />
     <Compile Include="Events\PrintCouponEvent.cs" />
-    <Compile Include="Commands\CountProductsCommand.cs" />
+    <Compile Include="Commands\CountDailySalesCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\coupon.rpt">
+    <Content Include="Resources\action.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
@@ -73,7 +74,9 @@
     <Content Include="Resources\coupon_schema.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\count_products.png">
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\coupon.frx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

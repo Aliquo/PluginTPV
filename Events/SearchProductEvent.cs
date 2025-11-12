@@ -1,12 +1,14 @@
 ﻿using AliquoTPV.Core;
 using AliquoTPV.Extensibility;
+using System;
 using System.ComponentModel.Composition;
+using System.Media;
 
 namespace PluginTPV_Demo.Events
 {
     [Export(typeof(AliquoTPV.Extensibility.Events))]
     [EventsMetadata()]
-    internal class SearchProductEvent : AliquoTPV.Extensibility.Events
+    public class SearchProductEvent : AliquoTPV.Extensibility.Events
     {
         public SearchProductEvent()
         {
@@ -20,8 +22,14 @@ namespace PluginTPV_Demo.Events
             {
                 var values = e.Value.ToString().Split('#');
 
-                sender.SalesAddProduct(values[0], price: Convert.ValueToDecimal(values[1]));
-                e.Handled = true;
+                if (!String.IsNullOrWhiteSpace(values[0]) || !String.IsNullOrWhiteSpace(values[1]))
+                {
+                    decimal price = 0;
+                    decimal.TryParse(values[1], out price);
+
+                    sender.SalesAddProduct(values[0], price: price);
+                    e.Handled = true;
+                }                
             }
         }
 
