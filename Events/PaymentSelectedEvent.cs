@@ -10,17 +10,17 @@ namespace PluginTPV_Demo.Events
     {
         public PaymentSelectedEvent()
         {
-            this.PaymentSelected += Events_PaymentSelected;
+            this.PaymentEditBefore += Events_PaymentEditBefore;
         }
 
-        private void Events_PaymentSelected(IHost sender, PaymentEventArgs e)
+        private void Events_PaymentEditBefore(IHost sender, PaymentEventArgs e)
         {
 
             // card payments are intercepted to simulate payment by device
             if (e.PaymentMethodType == PaymentMethodType.Card)
             {
-                e.AmountPaid = e.AmountPending;
-                e.AmountDelivered = e.AmountPending;
+                e.Payment.Amount = e.AmountPending;
+                e.Payment.AmountDelivered = e.AmountPending;
                 e.Handled= true;
             }
         }
